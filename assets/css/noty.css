@@ -1,0 +1,253 @@
+@font-face {
+  font-family: 'Cairo'; 
+  src:
+       url('../font/Cairo-VariableFont_slnt,wght.ttf') format('truetype');
+  font-weight: normal; 
+  font-style: normal;
+}
+
+:root {
+  --mainColor: #fff;
+  --secondColor: #000;
+  --cardColor: #25b782;
+  --lineColor: #e7e7e723;
+  --overLayColor: rgba(0, 0, 0, 0.481);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  background: url(../images/circle-scatter-haikei.svg) center;
+  background-size: cover;
+  color: var(--secondColor);
+}
+
+header{
+  float: left;
+  width: 10%;
+  height: 50vh;
+}
+nav{
+  margin-top: 15%;
+  height: 30%;
+  text-align: center;
+}
+nav a{
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  background: var(--cardColor);
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-top: 10%;
+  border: 2px solid var(--cardColor);
+  transition: 0.5s ease;
+}
+nav a i{
+  font-size: 20px;
+}
+nav a:hover{
+  background: none;
+}
+
+@media (max-width: 767px){
+  header{
+    
+  }
+}
+
+@media (min-width: 768px){
+  header{
+    width: 15%;
+  }
+  nav{
+  height: 50%;
+  }
+  nav a{
+    padding: 15px 30px;
+  }
+  nav a i{
+    font-size: 30px;
+  }
+}
+/*******************************/
+.app {
+  padding: 20px;
+  height: 100vh;
+}
+
+.app .header h1 {
+  text-align: center;
+}
+.app .header h1 span{
+  color: var(--cardColor);
+}
+.app .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: 10px;
+  margin: 16px;
+  margin-top: 2%;
+}
+
+.app .card-style {
+  background-color: #25b782f5;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.app .cards .add {
+  display: grid;
+  place-items: center;
+}
+
+.app .cards .plus {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.app .cards .add i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.app .cards .card .card_content {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px){
+  .app .cards{
+
+  }
+}
+
+@media (min-width: 768px){
+  .app{
+    
+  }
+  .app .cards{
+    
+  }
+  .app .card-style{
+  }
+
+}
+/***************************/
+.app .cards .card .card_details {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--mainColor);
+  margin: 10px 0px;
+  padding: 2px 0px;
+  align-items: center;
+}
+
+.app .cards .card .card_details > span {
+  font-size: 12px;
+}
+.app .cards .card .card_details .menu-app {
+  position: relative;
+}
+.app .cards .card .card_details .menu-app > i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.app .cards .card .card_details .menu-app .menu {
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  width: 100px;
+  padding: 10px 0px;
+  border-radius: 4px;
+  left: auto;
+  top: auto;
+  z-index: 6;
+  transform: scale(0);
+  transition: all 200ms linear;
+}
+.app .cards .card .card_details .menu-app:hover .menu {
+  transform: scale(1);
+}
+
+.app .cards .card .card_details .menu-app .menu li {
+  cursor: pointer;
+  padding: 3px 10px;
+  transition: all 200ms linear;
+}
+.app .cards .card .card_details .menu-app .menu li:hover {
+  background-color: var(--lineColor);
+}
+.popup-app {
+  position: fixed;
+  inset: 0;
+  background-color: var(--overLayColor);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+  display: none;
+}
+
+.popup-app.open {
+  display: grid;
+}
+.popup-app .popup {
+    background-color: rgb(255 255 255);
+    width: 340px;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+.popup-app .popup .header_popup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.popup-app .popup .header_popup i {
+  font-size: 20px;
+  cursor: pointer;
+}
+.popup-app .popup form {
+  margin: 15px 0px;
+}
+
+.popup-app .popup form > div {
+  margin: 15px 0px;
+}
+
+.popup-app .popup form > div :where(input, textarea) {
+  display: block;
+  width: 100%;
+  outline-width: 0;
+  padding: 7px;
+  background-color: initial;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  color: var(--secondColor);
+}
+
+.popup-app .popup form > div textarea {
+  resize: none;
+  height: 120px;
+}
+
+.popup-app .popup form > button {
+  width: 100%;
+  padding: 10px 0px;
+  border-width: 0;
+  background-color: var(--cardColor);
+  color: var(--secondColor);
+  cursor: pointer;
+  border-radius: 6px;
+}
+/* Global*/
+li {
+  list-style: none;
+}

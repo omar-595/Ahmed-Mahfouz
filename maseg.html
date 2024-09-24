@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/images/icon.jpg"/>
+  <title>Maseg | Ahmed Mahfouz</title>
+  
+  <link rel="stylesheet" href="assets/css/book.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+</head>
+<body>
+
+  <header>
+      <nav>
+        <a href="index.html"><i class="fa fa-home"></i></a>
+        <br>
+        <a href="noty.html"><i class="fa fa-note-sticky"></i></a>
+        <br>
+        <a href="list.html"><i class="fa fa-list-check"></i></a>
+        <br>
+        <a href="tebol.html"><i class="fa fa-book"></i></a>
+        <br>
+        <a href="maseg.html"><i class="fa fa-comment"></i></a>
+      </nav>
+    </header>
+
+  <!-- <div class="maseg" id="maseg">
+      <h4>Hello Ahmed</h4>
+      <button onclick="remov('ve');">OK</button>
+    </div> -->
+
+  <div class="container">
+
+    <h1>تحديد المواد الدراسية</h1>
+    
+    <div class="form-group">
+      <input type="text" id="subject" placeholder="أضف مادة جديدة">
+      <button id="addSubject" class="boutto">إضافة</button>
+    </div>
+
+    <ul id="subjectList"></ul>
+
+    <div class="reminder-section">
+      <label for="reminderTime">حدد وقت التذكير:</label>
+      <input type="datetime-local" id="reminderTime">
+      <button id="setReminder" class="boutto">ضبط التذكير</button>
+    </div>
+    <audio id="reminderSound" src="assets/audios/suc.mp3" preload="auto"></audio>
+  </div>
+
+  <script src="assets/js/maseg.js"></script>
+</body>
+</html>
